@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Login/Create Account Page</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login form -->
+        <form class="form" id="login">
+            <h1 class="form__title">Login</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" id="loginUsername" class="form__input" autofocus placeholder="Username">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" id="loginPassword" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a href="#" class="form__link">Forgot your password?</a>
+            </p>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+
+        <!-- Registration forms -->
+        <form class="form form--hidden" id="createAccount">
+            <h1 class="form__title">Create Account</h1>
+            <p class="form__text">
+                <label for="userType">Choose User Type:</label>
+                <select id="userType" class="form__input">
+                    <option value="customer">Customer</option>
+                    <option value="employee">Employee</option>
+                </select>
+            </p>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+            </p>
+        </form>
+
+        <form class="form form--hidden" id="customerCreateAccount">
+            <h1 class="form__title">Customer Registration</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" id="signupUsernameC" class="form__input" autofocus placeholder="Username">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="int" id="signupEmailC" class="form__input" autofocus placeholder="Email Address">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="number" id="signupPhoneNumberC" class="form__input" autofocus placeholder="Phone Number">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" id="signupPasswordC" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" id="signupPasswordConfirmC" class="form__input" autofocus
+                    placeholder="Confirm Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <p class="form__text">
+                <input type="checkbox" id="termsCheckboxC">
+                <a class="form__link" href="./" id="customertermAndCondition">Terms and Conditions</a>
+            </p>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" href="./login.html" id="linkLogin">Back To Login</a>
+            </p>
+        </form>
+
+        <form class="form form--hidden" id="employeeCreateAccount">
+            <h1 class="form__title">Employee Registration</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" id="signupUsernameE" class="form__input" autofocus placeholder="Employee ID">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" id="signupPasswordE" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" id="signupPasswordConfirmE" class="form__input" autofocus
+                    placeholder="Confirm Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <p class="form__text">
+                <input type="checkbox" id="termsCheckboxE">
+                <a class="form__link" href="./" id="employeetermAndCondition">Terms and Conditions</a>
+            </p>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" href="./login.html" id="linkLogin">Back To Login</a>
+            </p>
+        </form>
+
+        <!-- Policy form -->
+        <form action="login.html" method="post" id="termsForm" style="display: none;">
+            <h3>Terms and Conditions - Sports Centre Booking System</h3>
+
+            <p>Welcome to our sports center booking system! Please read and agree to the following terms and conditions:
+            </p>
+
+            <p>Booking:</p>
+            <ul>
+                <li>By making a booking, you confirm that you are of legal age and provide accurate information.</li>
+            </ul>
+
+            <p>Availability and Use of Facilities:</p>
+            <ul>
+                <li>Facility availability is subject to change and may be limited during peak hours or due to
+                    maintenance.</li>
+                <li>Users are responsible for using the facilities in a safe and respectful manner.</li>
+                <li>Users must follow any additional rules or instructions provided by the sports center staff.</li>
+            </ul>
+
+            <p>Booking Modifications and Cancellations:</p>
+            <ul>
+                <li>Bookings can be modified or canceled within a reasonable time frame before the scheduled start time.
+                </li>
+                <li>Refunds, if applicable, will be processed according to our refund policy.</li>
+            </ul>
+
+            <p>Liability:</p>
+            <ul>
+                <li>The sports center is not liable for any injuries, accidents, or lost/stolen items that occur during
+                    facility use.</li>
+                <li>Users participate in activities at their own risk and are responsible for their own safety.</li>
+            </ul>
+
+            <p>Code of Conduct:</p>
+            <ul>
+                <li>Users must adhere to a code of conduct that promotes a safe and respectful environment for all.</li>
+                <li>Any violation of the code of conduct may result in the suspension or termination of booking
+                    privileges.</li>
+            </ul>
+
+            <p>By making a booking, you acknowledge that you have read, understood, and agreed to abide by the terms and
+                conditions above. If you do not agree, please refrain from using our sports center booking system.</p>
+
+            <p>Thank you for choosing our sports center. Enjoy your experience!</p>
+            <button class="policy__button" type="submit">Continue</button>
+        </form>
+    </div>
+    <script src="./login.js"></script>
+</body>
+
+</html>
